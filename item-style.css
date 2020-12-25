@@ -435,7 +435,8 @@ Cocktail
 }
 
 .col-4 img {
-  width: 100%;
+  height: 20vh;
+  width: 35vh;
 }
 
 .row {
@@ -477,7 +478,7 @@ Cocktail
   transform: translateY(-5px);
 }
 
-.ingre a {
+.ingre button {
   display: flex;
   justify-content: center;
 }
@@ -562,4 +563,60 @@ Cocktail
 .hide span {
   transform: translateY(100%);
   display: inline-block;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.livestream img {
+  margin-left: 30px;
+  width: 90%;
+}
+
+.container.active {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#added {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: var(--clr-orange-3);
+}
+#added.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.added a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
